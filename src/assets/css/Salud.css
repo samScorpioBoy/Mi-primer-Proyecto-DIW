@@ -1,0 +1,1209 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;600&display=swap');
+
+.salud-page {
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/* HERO */
+.salud-hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.salud-hero-img {
+  position: relative;
+  flex: 0 0 420px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.salud-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.salud-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.45));
+}
+
+.salud-hero-overlay h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a4b8c;
+  margin: 0;
+  line-height: 1.3;
+  transition: text-shadow 0.3s ease;
+}
+
+.salud-hero-text {
+  flex: 1;
+}
+
+.salud-hero-text p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SERVICIOS */
+.salud-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  background: #f5f5f0;
+  padding: 40px 30px;
+  border-radius: 16px;
+}
+
+.salud-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.salud-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  align-self: center;
+  margin-bottom: 6px;
+}
+
+.salud-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.salud-card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* BOTONES SERVICIOS */
+.btn-salud {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+
+.btn-salud:hover { opacity: 0.85; }
+
+.btn-salud-yellow { background: #f5a623; }
+.btn-salud-green  { background: #2aa952; }
+.btn-salud-dark   { background: #1a4b8c; }
+
+/* DIVIDER */
+.salud-divider {
+  border: none;
+  border-top: 2px solid #f5a623;
+  max-width: 700px;
+  margin: 10px auto 40px;
+}
+
+/* ARTÍCULOS */
+.salud-articulos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  margin-bottom: 40px;
+}
+
+.salud-articulo h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 10px;
+}
+
+.salud-articulo p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .salud-hero { flex-direction: column; }
+  .salud-hero-img { flex: unset; width: 100%; }
+  .salud-servicios { grid-template-columns: 1fr; }
+  .salud-articulos { grid-template-columns: 1fr; }
+}
+
+/* SECCIÓN SALUD SEXUAL */
+.salud-sexual-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salud-sexual-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.salud-sexual-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.salud-sexual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.salud-sexual-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salud-sexual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.salud-sexual-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.salud-sexual-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 14px;
+}
+
+.salud-sexual-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.salud-sexual-card ul li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .salud-sexual-grid { grid-template-columns: 1fr; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;600&display=swap');
+
+.salud-page {
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/* HERO */
+.salud-hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.salud-hero-img {
+  position: relative;
+  flex: 0 0 420px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.salud-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.salud-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.45));
+}
+
+.salud-hero-overlay h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a4b8c;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+}
+
+.salud-hero-text {
+  flex: 1;
+}
+
+.salud-hero-text p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SERVICIOS */
+.salud-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  background: #f5f5f0;
+  padding: 40px 30px;
+  border-radius: 16px;
+}
+
+.salud-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.salud-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  align-self: center;
+  margin-bottom: 6px;
+}
+
+.salud-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.salud-card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* BOTONES SERVICIOS */
+.btn-salud {
+  border: none;
+  border-radius: 30px;
+  padding: 5px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+
+.btn-salud:hover { opacity: 0.85; }
+
+.btn-salud-yellow { background: #f5a623; }
+.btn-salud-green  { background: #2aa952; }
+.btn-salud-dark   { background: #1a4b8c; }
+
+/* DIVIDER */
+.salud-divider {
+  border: none;
+  border-top: 2px solid #f5a623;
+  max-width: 700px;
+  margin: 10px auto 40px;
+}
+
+/* ARTÍCULOS */
+.salud-articulos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  margin-bottom: 40px;
+}
+
+.salud-articulo h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 10px;
+}
+
+.salud-articulo p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .salud-hero { flex-direction: column; }
+  .salud-hero-img { flex: unset; width: 100%; }
+  .salud-servicios { grid-template-columns: 1fr; }
+  .salud-articulos { grid-template-columns: 1fr; }
+}
+
+/* SECCIÓN SALUD SEXUAL */
+.salud-sexual-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salud-sexual-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.salud-sexual-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.salud-sexual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.salud-sexual-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salud-sexual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.salud-sexual-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.salud-sexual-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 14px;
+}
+
+.salud-sexual-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.salud-sexual-card ul li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .salud-sexual-grid { grid-template-columns: 1fr; }
+}
+
+/* SECCIÓN SALUD MENTAL */
+.salud-mental-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salud-mental-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.salud-mental-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.salud-mental-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.salud-mental-card {
+  background: #f0f9f4;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border-left: 4px solid #6fcf97;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salud-mental-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.salud-mental-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.salud-mental-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 12px;
+}
+
+.salud-mental-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.salud-mental-card ul li {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* EMERGENCIAS */
+.salud-emergencias {
+  background: #fff3cd;
+  border: 2px solid #f5a623;
+  border-radius: 16px;
+  padding: 30px 36px;
+  margin-bottom: 40px;
+}
+
+.salud-emergencias h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: #111;
+  margin: 0 0 10px;
+}
+
+.salud-emergencias p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.emergencias-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emergencia-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+.emergencia-num {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a4b8c;
+  min-width: 120px;
+}
+
+.emergencia-item span:last-child {
+  font-size: 14px;
+  color: #333;
+}
+
+/* CITA */
+.salud-cita {
+  background: #f0f9f4;
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 40px;
+}
+
+.salud-cita h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  color: #1a4b8c;
+  margin: 0 0 12px;
+}
+
+.salud-cita p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.salud-cita ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.salud-cita ul li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.cita-nota {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+.btn-cita {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-cita:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .salud-mental-grid { grid-template-columns: 1fr; }
+  .emergencia-num { min-width: 80px; font-size: 18px; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;600&display=swap');
+
+.salud-page {
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+/* HERO */
+.salud-hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.salud-hero-img {
+  position: relative;
+  flex: 0 0 420px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.salud-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.salud-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.45));
+}
+
+.salud-hero-overlay h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a4b8c;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+}
+
+.salud-hero-text {
+  flex: 1;
+}
+
+.salud-hero-text p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SERVICIOS */
+.salud-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+  background: #f5f5f0;
+  padding: 40px 30px;
+  border-radius: 16px;
+}
+
+.salud-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.salud-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  align-self: center;
+  margin-bottom: 6px;
+}
+
+.salud-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.salud-card p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* BOTONES SERVICIOS */
+.btn-salud {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+  margin-top: auto;
+  transition: opacity 0.2s;
+}
+
+.btn-salud:hover { opacity: 0.85; }
+
+.btn-salud-yellow { background: #f5a623; }
+.btn-salud-green  { background: #2aa952; }
+.btn-salud-dark   { background: #1a4b8c; }
+
+/* DIVIDER */
+.salud-divider {
+  border: none;
+  border-top: 2px solid #f5a623;
+  max-width: 700px;
+  margin: 10px auto 40px;
+}
+
+/* ARTÍCULOS */
+.salud-articulos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+  margin-bottom: 40px;
+}
+
+.salud-articulo h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 10px;
+}
+
+.salud-articulo p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .salud-hero { flex-direction: column; }
+  .salud-hero-img { flex: unset; width: 100%; }
+  .salud-servicios { grid-template-columns: 1fr; }
+  .salud-articulos { grid-template-columns: 1fr; }
+}
+
+/* SECCIÓN SALUD SEXUAL */
+.salud-sexual-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salud-sexual-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.salud-sexual-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.salud-sexual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.salud-sexual-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salud-sexual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.salud-sexual-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+
+.salud-sexual-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 14px;
+}
+
+.salud-sexual-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.salud-sexual-card ul li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .salud-sexual-grid { grid-template-columns: 1fr; }
+}
+
+/* SECCIÓN SALUD MENTAL */
+.salud-mental-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.salud-mental-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.salud-mental-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.salud-mental-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.salud-mental-card {
+  background: #f0f9f4;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #6fcf97;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salud-mental-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.salud-mental-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.salud-mental-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 12px;
+}
+
+.salud-mental-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.salud-mental-card ul li {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* EMERGENCIAS */
+.salud-emergencias {
+  background: #fff3cd;
+  border: 2px solid #f5a623;
+  border-radius: 16px;
+  padding: 30px 36px;
+  margin-bottom: 40px;
+}
+
+.salud-emergencias h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  color: #111;
+  margin: 0 0 10px;
+}
+
+.salud-emergencias p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.emergencias-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.emergencia-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+.emergencia-num {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a4b8c;
+  min-width: 120px;
+}
+
+.emergencia-item span:last-child {
+  font-size: 14px;
+  color: #333;
+}
+
+/* CITA */
+.salud-cita {
+  background: #f0f9f4;
+  border-radius: 16px;
+  padding: 36px;
+  margin-bottom: 40px;
+}
+
+.salud-cita h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  color: #1a4b8c;
+  margin: 0 0 12px;
+}
+
+.salud-cita p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.salud-cita ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.salud-cita ul li {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.cita-nota {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+
+.btn-cita {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-cita:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .salud-mental-grid { grid-template-columns: 1fr; }
+  .emergencia-num { min-width: 80px; font-size: 18px; }
+}
+
+/* ACTIVIDADES SALUDABLES */
+.actividades-section {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.actividades-section h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: #1a4b8c;
+  margin-bottom: 16px;
+}
+
+.actividades-intro {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.actividades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.actividades-card {
+  background: #fff8f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid #c59719;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.actividades-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.actividades-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.actividades-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a4b8c;
+  margin: 0 0 12px;
+}
+
+.actividades-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.actividades-card ul li {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+
+/* POLIDEPORTIVO */
+.polideportivo-box {
+  background: #53ac6f;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.polideportivo-text h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 14px;
+}
+
+.polideportivo-text p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.polideportivo-text ul {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.polideportivo-text ul li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.8;
+}
+
+.btn-polideportivo {
+  background: #fff;
+  color: #1a4b8c;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-polideportivo:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .actividades-grid { grid-template-columns: 1fr; }
+  .polideportivo-box { padding: 24px; }
+}

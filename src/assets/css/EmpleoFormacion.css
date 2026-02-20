@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Lato:wght@400;600&display=swap');
+
+.empleo-page {
+  font-family: 'Lato', sans-serif;
+  background: #f8f8f8;
+}
+
+/* HERO */
+.empleo-hero {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+}
+
+.empleo-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.empleo-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%; 
+  display: block;
+}
+
+.empleo-hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  margin-top: -40px;
+  display: flex;
+  align-items: center;
+  padding: 40px 50px;
+  background: rgba(78, 71, 71, 0.1); 
+}
+
+.empleo-hero-text h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: #1a4b8c;
+  line-height: 1.4;
+  margin: 0;
+  transition: text-shadow 0.3s ease;
+}
+
+.empleo-hero-text:hover h1{
+  text-shadow: 0 0 15px rgba(197, 195, 195, 0.9), 0 0 30px rgba(100, 180, 255, 0.8);
+}
+
+
+/* INTRO */
+.empleo-intro {
+  max-width: 700px;
+  margin: 50px auto 40px;
+  text-align: center;
+}
+
+.empleo-intro p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* SERVICIOS */
+.empleo-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 0 40px;
+}
+
+.empleo-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(165, 162, 162, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.empleo-card:hover {
+  transform: translateY(-4px);
+}
+
+.empleo-card-icon {
+  margin-bottom: 10px;
+}
+
+.empleo-card-icon img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.empleo-card h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.empleo-card h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.empleo-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* BOTONES */
+.btn-empleo {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  margin-top: auto;
+  transition: opacity 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-empleo:hover { opacity: 0.85; }
+
+.btn-empleo-dark   { background: #1a4b8c; }
+.btn-empleo-yellow { background: #f5a623; }
+.btn-empleo-green  { background: #2aa952; }
+
+/* TEXTO FINAL */
+.empleo-footer-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.empleo-footer-text p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* DIVIDER */
+.empleo-divider {
+  border: none;
+  border-top: 2px solid #f5a623;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .empleo-hero { height: auto; }
+  .empleo-hero-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 24px;
+  }
+  .empleo-hero-img {
+    position: relative;
+    height: 200px;
+  }
+  .empleo-servicios {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}

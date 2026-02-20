@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.footer-line {
+  border: none;
+  border-top: 2px solid #f5a623;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 40px 30px;
+}
+
+.footer-content p {
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-escudo {
+  position: absolute;
+  right: 40px;
+  height: 60px;
+  object-fit: contain;
+}

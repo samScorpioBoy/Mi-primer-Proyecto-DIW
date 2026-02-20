@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+.carne-page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.btn-filter {
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-filter:hover {
+  opacity: 0.85;
+}
+
+.btn-filter.active { background-color: #28a745; }
+.btn-filter.blue { background-color: #1a4b8c; }
+.btn-filter.yellow { background-color: #ffc107; }
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.title-blue {
+  color: #1a4b8c;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.sidebar-info {
+  text-align: center;
+}
+
+.carnet-img-container {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.carnet-main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carnet-main-image:hover {
+  transform: translateY(-5px);  /* ← valor añadido */
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+.btn-solicitar {
+  background-color: #0d4c92;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.btn-solicitar:hover {
+  background-color: #14ce3f;
+}
+
+.small-text {
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1.6;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.ventajas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card-ventaja {
+  border: 2px solid #e0f2f1;
+  border-radius: 35px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card-ventaja:hover {
+  transform: translateY(-5px);
+  border-color: #28a745;
+}
+
+.icon-ventaja {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.card-ventaja h3 {
+  color: #1a4b8c;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-ventaja p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.4;
+}

@@ -1,0 +1,75 @@
+.post {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+/* Imagen uniforme */
+.post .imagen {
+  width: 100%;
+  height: 180px;       /* altura fija */
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+
+.post .imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   
+  display: block;
+}
+
+/* Nombre de la banda centrado */
+.post-banda {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px; 
+  padding: 8px 10px;
+  color: #333;
+}
+
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  padding: 5px 10px;
+}
+
+
+.fecha-hora {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fecha-hora .fecha {
+  font-size: 16px; /* más grande */
+  font-weight: bold;
+  color: #333;
+}
+
+.fecha-hora .hora {
+  font-size: 14px; 
+  color: #555;
+}
+
+/* Corazón */
+.btn-like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-like img {
+  width: 22px;  
+  height: 22px;
+}
