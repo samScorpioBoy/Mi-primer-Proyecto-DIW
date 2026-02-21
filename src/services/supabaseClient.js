@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://yxmtrbyafomntdohxtii.supabase.co";
-const supabaseKey = "sb_publishable_-QCFd4d3dIIw7416qd_6gA_tHQix3ga";
+// Las credenciales se leen desde variables de entorno definidas en el archivo .env
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
 export const supabase = createClient(supabaseUrl, supabaseKey);

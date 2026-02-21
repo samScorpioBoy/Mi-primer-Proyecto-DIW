@@ -1,4 +1,4 @@
-import { useLang } from "../context/LangContext";
+import { useLang } from "../context/LangContext";   
 import Post from "../components/Post";
 import "../assets/css/Cultura.css";
 

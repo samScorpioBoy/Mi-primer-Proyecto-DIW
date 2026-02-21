@@ -1,75 +1,85 @@
 .post {
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   overflow: hidden;
-  margin-bottom: 20px;
   width: 100%;
   max-width: 250px;
-
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
+  font-family: var(--font-ui);
+  background: var(--bg-white);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 
-/* Imagen uniforme */
+.post:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
 .post .imagen {
   width: 100%;
-  height: 180px;       /* altura fija */
+  height: 180px;
   overflow: hidden;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .post .imagen img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   
-  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Nombre de la banda centrado */
+.post:hover .imagen img {
+  transform: scale(1.05);
+}
+
 .post-banda {
   text-align: center;
-  font-weight: bold;
-  font-size: 22px; 
-  padding: 8px 10px;
-  color: #333;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 12px 6px;
+  color: var(--color-text);
 }
-
 
 .post-footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  padding: 5px 10px;
+  align-items: flex-start;
+  padding: 6px 12px 10px;
 }
-
 
 .fecha-hora {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2px;
 }
 
 .fecha-hora .fecha {
-  font-size: 16px; /* más grande */
-  font-weight: bold;
-  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .fecha-hora .hora {
-  font-size: 14px; 
-  color: #555;
+  font-size: 12px;
+  color: var(--color-text-soft);
 }
 
-/* Corazón */
 .btn-like {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 4px;
+  transition: transform var(--transition);
+}
+
+.btn-like:hover {
+  transform: scale(1.2);
 }
 
 .btn-like img {
-  width: 22px;  
+  width: 22px;
   height: 22px;
 }

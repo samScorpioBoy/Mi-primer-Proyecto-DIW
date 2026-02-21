@@ -29,6 +29,7 @@ const translations = {
       vivienda:  { ES: "AYUDAS ALQUILER\nY VIVIENDA", EN: "RENTAL\nASSISTANCE", VAL: "AJUDES LLOGUER\nI HABITATGE" },
       salud:     { ES: "SALUD Y\nBIENESTAR",      EN: "HEALTH &\nWELLBEING", VAL: "SALUT I\nBENESTAR" },
       cursos:    { ES: "CURSOS Y\nTALLERES",      EN: "COURSES &\nWORKSHOPS", VAL: "CURSOS I\nTALLERS" },
+      carne: { ES: "Carnet\nJoven", EN: "Youth\nCard", VAL: "Carnet\nJove" }
     },
   },
 
@@ -52,7 +53,6 @@ const translations = {
 
   // ─── SALUD ──────────────────────────────────────────────────────────────────
   salud: {
-    // Hero
     heroTitle: {
       ES: "Bienestar Joven en Burjassot:\nCuida tu Salud Física y Mental",
       EN: "Youth Wellbeing in Burjassot:\nTake Care of Your Physical and Mental Health",
@@ -63,8 +63,6 @@ const translations = {
       EN: "The comprehensive development of Burjassot's youth is our priority. Good physical and mental health is the foundation for achieving your goals.",
       VAL: "El desenvolupament integral dels joves de Burjassot és la nostra prioritat. Una bona salut física i mental és la base per a assolir les teues metes.",
     },
-
-    // Cards servicio
     card1Title: { ES: "Salud Mental Joven",          EN: "Youth Mental Health",            VAL: "Salut Mental Jove" },
     card1Desc:  { ES: "Apoyo psicológico, talleres y grupos de ayuda", EN: "Psychological support, workshops and help groups", VAL: "Suport psicològic, tallers i grups d'ajuda" },
     card1Btn:   { ES: "Más Información",              EN: "More Info",                      VAL: "Més Informació" },
@@ -75,7 +73,6 @@ const translations = {
     card3Desc:  { ES: "Información, asesoramiento y prevención.", EN: "Information, counselling and prevention.", VAL: "Informació, assessorament i prevenció." },
     card3Btn:   { ES: "Más Información",              EN: "More Info",                      VAL: "Més Informació" },
 
-    // Artículos
     art1Title: { ES: "Prevención del VIH e ITS", EN: "HIV and STI Prevention", VAL: "Prevenció del VIH i ITS" },
     art1Desc: {
       ES: "La información veraz es tu mejor aliada. Conocer los métodos de transmisión y prevención del VIH y otras ITS es fundamental para tomar decisiones responsables.",
@@ -101,7 +98,6 @@ const translations = {
       VAL: "Organitzem cursos bàsics de primers auxilis i RCP perquè adquirisques coneixements essencials en situacions crítiques.",
     },
 
-    // Salud Sexual
     sexualTitle: {
       ES: "🌿 Salud Sexual y Reproductiva: Cuídate y Decide con Información",
       EN: "🌿 Sexual and Reproductive Health: Take Care and Decide with Information",
@@ -124,12 +120,47 @@ const translations = {
     sex3i1: { ES: "El consentimiento debe ser libre, entusiasta y reversible en cualquier momento.", EN: "Consent must be free, enthusiastic and reversible at any time.", VAL: "El consentiment ha de ser lliure, entusiasta i reversible en qualsevol moment." },
     sex3i2: { ES: "Si hay control, chantaje o violencia en tu relación, no estás solo/a.", EN: "If there is control, blackmail or violence in your relationship, you are not alone.", VAL: "Si hi ha control, xantatge o violència en la teua relació, no estàs sol/a." },
     sex3i3: { ES: "Ayuda inmediata: llama al 016 (no deja rastro) o contacta con Servicios Sociales.", EN: "Immediate help: call 016 (leaves no trace) or contact Social Services.", VAL: "Ajuda immediata: truca al 016 (no deixa rastre) o contacta amb Serveis Socials." },
-    sex4Title: { ES: "Asesoría Afectivo-Sexual en Burjassot", EN: "Affective-Sexual Counselling in Burjassot", VAL: "Assessoria Afectivo-Sexual a Burjassot" },
-    sex4i1: { ES: "Servicio de Orientación Juvenil con psicólogos y sexólogos sin tabúes.", EN: "Youth Guidance Service with psychologists and sexologists, no taboos.", VAL: "Servei d'Orientació Juvenil amb psicòlegs i sexòlegs sense tabús." },
-    sex4i2: { ES: "Contacto directo por teléfono, WhatsApp o correo electrónico.", EN: "Direct contact by phone, WhatsApp or email.", VAL: "Contacte directe per telèfon, WhatsApp o correu electrònic." },
-    sex4i3: { ES: "Atención presencial en la Casa de la Juventud. 100% confidencial y gratuita.", EN: "In-person care at the Youth House. 100% confidential and free.", VAL: "Atenció presencial a la Casa de la Joventut. 100% confidencial i gratuïta." },
 
-    // Salud Mental
+    // ── NUEVA tarjeta: Tus Derechos en Salud Sexual ──
+    derechosTitle: { ES: "Tus Derechos en Salud Sexual", EN: "Your Sexual Health Rights", VAL: "Els teus Drets en Salut Sexual" },
+    der1Title: { ES: "Confidencialidad", EN: "Confidentiality", VAL: "Confidencialitat" },
+    der1Desc: {
+      ES: "Tienes derecho a recibir información y atención médica de forma privada, sin que nadie sea informado sin tu consentimiento.",
+      EN: "You have the right to receive information and medical care privately, without anyone being informed without your consent.",
+      VAL: "Tens dret a rebre informació i atenció mèdica de forma privada, sense que ningú siga informat sense el teu consentiment.",
+    },
+    der2Title: { ES: "Autonomía", EN: "Autonomy", VAL: "Autonomia" },
+    der2Desc: {
+      ES: "A partir de los 16 años (y en algunos casos antes), puedes decidir sobre tu salud sexual y reproductiva de forma independiente.",
+      EN: "From the age of 16 (and in some cases before), you can make decisions about your sexual and reproductive health independently.",
+      VAL: "A partir dels 16 anys (i en alguns casos abans), pots decidir sobre la teua salut sexual i reproductiva de forma independent.",
+    },
+    der3Title: { ES: "Acceso Universal", EN: "Universal Access", VAL: "Accés Universal" },
+    der3Desc: {
+      ES: "La sanidad pública garantiza el acceso gratuito a consultas, pruebas y asesoramiento sin importar tu situación.",
+      EN: "Public health guarantees free access to consultations, tests and counselling regardless of your situation.",
+      VAL: "La sanitat pública garanteix l'accés gratuït a consultes, proves i assessorament sense importar la teua situació.",
+    },
+
+    // AVACOS
+    avacosTitle: {
+      ES: "¿Tienes dudas sobre tu salud sexual?",
+      EN: "Do you have questions about your sexual health?",
+      VAL: "Tens dubtes sobre la teua salut sexual?",
+    },
+    avacosDesc: {
+      ES: "Si tienes temor o dudas, te recomendamos AVACOS. Ofrecen la prueba de VIH de forma anónima, gratuita, rápida y segura. Dar el paso es cuidarte.",
+      EN: "If you have fears or doubts, we recommend AVACOS. They offer anonymous, free, fast and safe HIV testing. Taking the step means taking care of yourself.",
+      VAL: "Si tens por o dubtes, et recomanem AVACOS. Oferixen la prova del VIH de forma anònima, gratuïta, ràpida i segura. Fer el pas és cuidar-te.",
+    },
+    avacosMapaDesc: {
+      ES: "¿Buscas el centro más cercano? Consulta nuestro mapa interactivo de lugares oficiales donde realizarte exámenes de salud sexual.",
+      EN: "Looking for the nearest centre? Check our interactive map of official places where you can get sexual health tests.",
+      VAL: "Busques el centre més pròxim? Consulta el nostre mapa interactiu de llocs oficials on fer-te exàmens de salut sexual.",
+    },
+    avacosBtnAvacos: { ES: "🔬 Ir a AVACOS",             EN: "🔬 Go to AVACOS",           VAL: "🔬 Anar a AVACOS" },
+    avacosBtnMapa:   { ES: "🗺️ Ir al Mapa Interactivo", EN: "🗺️ Go to Interactive Map", VAL: "🗺️ Anar al Mapa Interactiu" },
+
     mentalTitle: {
       ES: "🧠 Salud Mental Joven: Tu bienestar emocional es nuestra prioridad",
       EN: "🧠 Youth Mental Health: Your emotional wellbeing is our priority",
@@ -154,26 +185,12 @@ const translations = {
     men3i3: { ES: "Inteligencia emocional y cómo poner límites sanos.", EN: "Emotional intelligence and how to set healthy boundaries.", VAL: "Intel·ligència emocional i com posar límits sans." },
     men3i4: { ES: "Mejora de la autoestima en la era de las redes sociales.", EN: "Building self-esteem in the age of social media.", VAL: "Millora de l'autoestima en l'era de les xarxes socials." },
 
-    // Emergencias
     emergenciasTitle: { ES: "📞 Líneas de Ayuda Urgente — Disponibles 24/7", EN: "📞 Emergency Helplines — Available 24/7", VAL: "📞 Línies d'Ajuda Urgent — Disponibles 24/7" },
     emergenciasDesc:  { ES: "Si estás pasando por una crisis grave o tienes pensamientos oscuros, pide ayuda inmediata:", EN: "If you are going through a serious crisis or having dark thoughts, ask for help immediately:", VAL: "Si estàs passant per una crisi greu o tens pensaments foscos, demana ajuda immediata:" },
     emergencia1: { ES: "Línea de atención a la conducta suicida — Gratuito y confidencial", EN: "Suicide behaviour helpline — Free and confidential", VAL: "Línia d'atenció a la conducta suïcida — Gratuït i confidencial" },
     emergencia2: { ES: "Teléfono de la Esperanza — Apoyo emocional en crisis", EN: "Telephone of Hope — Emotional support in crisis", VAL: "Telèfon de l'Esperança — Suport emocional en crisi" },
     emergencia3: { ES: "Emergencias", EN: "Emergencies", VAL: "Emergències" },
 
-    // Cita
-    citaTitle: { ES: "📅 ¿Cómo pedir tu cita en Jove Burjassot?", EN: "📅 How to book your appointment at Jove Burjassot?", VAL: "📅 Com demanar la teua cita a Jove Burjassot?" },
-    citaDesc:  { ES: "Dar el primer paso es de valientes. Para solicitar tu primera cita solo tienes que contactarnos:", EN: "Taking the first step is brave. To request your first appointment just contact us:", VAL: "Fer el primer pas és de valents. Per a sol·licitar la teua primera cita només has de contactar-nos:" },
-    citaPresencial: { ES: "Presencial:", EN: "In person:", VAL: "Presencial:" },
-    citaPresencialDesc: { ES: "Pásate por la Casa de la Juventud de Burjassot.", EN: "Come to the Burjassot Youth House.", VAL: "Passa't per la Casa de la Joventut de Burjassot." },
-    citaWA:    { ES: "WhatsApp/Teléfono:", EN: "WhatsApp/Phone:", VAL: "WhatsApp/Telèfon:" },
-    citaWADesc: { ES: "Escríbenos o llámanos al [número].", EN: "Write or call us at [number].", VAL: "Escriu-nos o truca'ns al [número]." },
-    citaEmail: { ES: "Correo:", EN: "Email:", VAL: "Correu:" },
-    citaEmailDesc: { ES: "[email o enlace a formulario web].", EN: "[email or web form link].", VAL: "[email o enllaç a formulari web]." },
-    citaNota:  { ES: "Tranquilo/a, todo lo que nos cuentes es confidencial.", EN: "Don't worry, everything you tell us is confidential.", VAL: "Tranquil/a, tot el que ens contes és confidencial." },
-    contactoWA: { ES: "💬 Contactar por WhatsApp", EN: "💬 Contact via WhatsApp", VAL: "💬 Contactar per WhatsApp" },
-
-    // Actividades saludables
     actTitle: {
       ES: "🏃🏽‍♀️ Salud Física y Movimiento: Tu cuerpo es tu motor",
       EN: "🏃🏽‍♀️ Physical Health and Movement: Your body is your engine",
@@ -196,8 +213,6 @@ const translations = {
     act3i1: { ES: "Nutrición consciente: come equilibrado, prioriza alimentos reales y mantente hidratado/a.", EN: "Mindful nutrition: eat balanced, prioritise real foods and stay hydrated.", VAL: "Nutrició conscient: menja equilibrat, prioritza aliments reals i mantén-te hidratat/a." },
     act3i2: { ES: "Descanso reparador: respeta tus 7-8 horas de sueño, tu cuerpo y cerebro lo necesitan.", EN: "Restorative rest: respect your 7-8 hours of sleep, your body and brain need it.", VAL: "Descans reparador: respecta les teues 7-8 hores de son, el teu cos i cervell ho necessiten." },
     act3i3: { ES: "Los tres pilares juntos (deporte, nutrición y descanso) te hacen sentir al 100%.", EN: "The three pillars together (sport, nutrition and rest) make you feel 100%.", VAL: "Els tres pilars junts (esport, nutrició i descans) et fan sentir al 100%." },
-
-    // Polideportivo
     poliTitle: { ES: "📍 ¡Ponte en marcha en el Polideportivo de Burjassot!", EN: "📍 Get moving at the Burjassot Sports Centre!", VAL: "📍 Posa't en marxa al Poliesportiu de Burjassot!" },
     poliDesc:  { ES: "El Polideportivo Municipal de Burjassot es el espacio ideal para ti. Cuenta con pistas de tenis, pádel, pabellón cubierto, campos de fútbol y piscina.", EN: "The Burjassot Municipal Sports Centre is the ideal space for you. It has tennis courts, padel, an indoor hall, football pitches and a swimming pool.", VAL: "El Poliesportiu Municipal de Burjassot és l'espai ideal per a tu. Compta amb pistes de tennis, pàdel, pavelló cobert, camps de futbol i piscina." },
     polii1: { ES: "Alquila pistas para jugar con tus amigos o ve a nadar a tu ritmo.", EN: "Rent courts to play with your friends or go swimming at your own pace.", VAL: "Lloga pistes per a jugar amb els teus amics o vés a nadar al teu ritme." },
@@ -210,40 +225,40 @@ const translations = {
   vivienda: {
     heroTitle:   { ES: "Tu Espacio Burjassot:\nGuía de Vivienda Joven", EN: "Your Burjassot Space:\nYouth Housing Guide", VAL: "El teu Espai Burjassot:\nGuia d'Habitatge Jove" },
     ayudasTitle: { ES: "Ayudas y Subvenciones Clave", EN: "Key Grants and Subsidies", VAL: "Ajudes i Subvencions Clau" },
-    card1Title:  { ES: "Bono Alquiler Joven Estatal",    EN: "National Youth Rental Bonus",         VAL: "Bo Lloguer Jove Estatal" },
+    card1Title:  { ES: "Bono Alquiler Joven Estatal",  EN: "National Youth Rental Bonus",   VAL: "Bo Lloguer Jove Estatal" },
     card1Desc:   { ES: "Hasta 250€/mes para tu alquier. Ayuda directa del gobierno.", EN: "Up to €250/month for your rent. Direct government aid.", VAL: "Fins a 250€/mes per al teu lloguer. Ajuda directa del govern." },
-    card1Btn:    { ES: "Requisitos y Solicitud",          EN: "Requirements & Application",          VAL: "Requisits i Sol·licitud" },
-    card2Title:  { ES: "Ayudas Municipales Burjassot",    EN: "Burjassot Municipal Aid",             VAL: "Ajudes Municipals Burjassot" },
-    card2Desc:   { ES: "Apoyo específico del Ayuntamiento empadronados.", EN: "Specific support from the Town Hall for registered residents.", VAL: "Suport específic de l'Ajuntament per a empadronats." },
-    card2Btn:    { ES: "Consultar en el Ayuntamiento",   EN: "Contact Town Hall",                   VAL: "Consultar a l'Ajuntament" },
-    card3Title:  { ES: "Guía de Emancipación",            EN: "Emancipation Guide",                  VAL: "Guia d'Emancipació" },
-    card3Desc:   { ES: "Aprende sobre contrato, fianzas y tus derechos.", EN: "Learn about contracts, deposits and your rights.", VAL: "Aprén sobre contracte, fiances i els teus drets." },
-    card3Btn:    { ES: "Descargar Guía PDF",              EN: "Download PDF Guide",                  VAL: "Descarregar Guia PDF" },
+    card1Btn:    { ES: "Requisitos y Solicitud",        EN: "Requirements & Application",    VAL: "Requisits i Sol·licitud" },
+    card2Title:  { ES: "Ingreso Mínimo Vital",          EN: "Minimum living income",         VAL: "Ingrés mínim vital" },
+    card2Desc:   { ES: "¿Vives solo y tienes ingresos bajos? Esta ayuda mensual de la Seguridad Social te garantiza un nivel mínimo de renta para que puedas centrarte en tu futuro.", EN: "Living alone on a low income? This monthly Social Security benefit guarantees a minimum income level so you can focus on your future.", VAL: "Vius sol i tens ingressos baixos? Esta ajuda mensual de la Seguretat Social et garanteix un nivell mínim de renda perquè pugues centrar-te en el teu futur." },
+    card2Btn:    { ES: "Visita Sitio Web",              EN: "Visit Website",                 VAL: "Visita el lloc Web" },
+    card3Title:  { ES: "Aval ICO 20%",                  EN: "ICO 20% Guarantee",             VAL: "Aval ICO 20%" },
+    card3Desc:   { ES: "¿Tienes trabajo pero no ahorros para la entrada? El Estado te avala el 20% de tu hipoteca para que el banco te preste hasta el 100%.", EN: "Do you have a job but no savings for the down payment? The State guarantees 20% of your mortgage so the bank can lend you up to 100%.", VAL: "Tens treball però no estalvis per a l'entrada? L'Estat t'avala el 20% de la teua hipoteca perquè el banc et preste fins al 100%." },
+    card3Btn:    { ES: "Visita Sitio Web",              EN: "Visit Website",                 VAL: "Visita el lloc Web" },
   },
 
   // ─── CARNET JOVEN ───────────────────────────────────────────────────────────
   carne: {
-    titulo:    { ES: "CARNET JOVEN",    EN: "YOUTH CARD",     VAL: "CARNET JOVE" },
+    titulo:    { ES: "CARNET JOVEN",     EN: "YOUTH CARD",     VAL: "CARNET JOVE" },
     solicitar: { ES: "SOLICITAR CARNET", EN: "APPLY FOR CARD", VAL: "SOL·LICITAR CARNET" },
     smallText: {
       ES: "ACCEDE A CIENTOS DE DESCUENTOS EN TIENDAS, TRANSPORTE, CINES Y MUCHO MÁS. TU CARNET ES VÁLIDO EN BURJASSOT, EN LA COMUNITAT Y POR TODA EUROPA. SI TIENES ENTRE 14 Y 30 AÑOS, ¡ES PARA TI!",
       EN: "ACCESS HUNDREDS OF DISCOUNTS IN SHOPS, TRANSPORT, CINEMAS AND MUCH MORE. YOUR CARD IS VALID IN BURJASSOT, IN THE REGION AND ACROSS EUROPE. IF YOU ARE BETWEEN 14 AND 30 YEARS OLD, IT'S FOR YOU!",
       VAL: "ACCEDEIX A CENTENARS DE DESCOMPTES EN BOTIGUES, TRANSPORT, CINEMES I MOLT MÉS. EL TEU CARNET ÉS VÀLID A BURJASSOT, A LA COMUNITAT I PER TOTA EUROPA. SI TENS ENTRE 14 I 30 ANYS, ÉS PER A TU!",
     },
-    ventajas:  { ES: "VENTAJAS",   EN: "BENEFITS",  VAL: "AVANTATGES" },
-    subtitle:  { ES: "Más planes, menos gasto. Accede a ventajas exclusivas para ti.", EN: "More plans, less spending. Access exclusive benefits for you.", VAL: "Més plans, menys despesa. Accedeix a avantatges exclusius per a tu." },
-    v1Title:   { ES: "Cines",       EN: "Cinemas",   VAL: "Cinemes" },
-    v1Desc:    { ES: "Obtén entre un 15% y 25% en tus funciones favoritas.", EN: "Get 15% to 25% off your favourite screenings.", VAL: "Obté entre un 15% i 25% en les teues funcions favorites." },
-    v2Title:   { ES: "Restaurantes", EN: "Restaurants", VAL: "Restaurants" },
-    v2Desc:    { ES: "Descuentos y menús especiales en locales.", EN: "Discounts and special menus at local venues.", VAL: "Descomptes i menús especials en locals." },
-    v3Title:   { ES: "Deportes",    EN: "Sports",    VAL: "Esports" },
-    v3Desc:    { ES: "Cuotas reducidas en gimnasios y pistas.", EN: "Reduced fees at gyms and courts.", VAL: "Quotes reduïdes en gimnasos i pistes." },
-    v4Title:   { ES: "Transporte Mobilis 30", EN: "Mobilis 30 Transport", VAL: "Transport Mobilis 30" },
-    v4Desc:    { ES: "Bono mensual a 14,90 € en la mobilis30.", EN: "Monthly pass at €14.90 on mobilis30.", VAL: "Bo mensual a 14,90 € en la mobilis30." },
-    v5Title:   { ES: "Tecnología",  EN: "Technology", VAL: "Tecnologia" },
-    v5Desc:    { ES: "Ofertas en reparaciones y tiendas locales.", EN: "Deals on repairs and local shops.", VAL: "Ofertes en reparacions i botigues locals." },
-    v6Title:   { ES: "Museos",      EN: "Museums",   VAL: "Museus" },
-    v6Desc:    { ES: "Hasta un 50% de descuento en la entrada.", EN: "Up to 50% off admission.", VAL: "Fins a un 50% de descompte en l'entrada." },
+    ventajas: { ES: "VENTAJAS",   EN: "BENEFITS",  VAL: "AVANTATGES" },
+    subtitle: { ES: "Más planes, menos gasto. Accede a ventajas exclusivas para ti.", EN: "More plans, less spending. Access exclusive benefits for you.", VAL: "Més plans, menys despesa. Accedeix a avantatges exclusius per a tu." },
+    v1Title:  { ES: "Cines",       EN: "Cinemas",    VAL: "Cinemes" },
+    v1Desc:   { ES: "Obtén entre un 15% y 25% en tus funciones favoritas.", EN: "Get 15% to 25% off your favourite screenings.", VAL: "Obté entre un 15% i 25% en les teues funcions favorites." },
+    v2Title:  { ES: "Restaurantes", EN: "Restaurants", VAL: "Restaurants" },
+    v2Desc:   { ES: "Descuentos y menús especiales en locales.", EN: "Discounts and special menus at local venues.", VAL: "Descomptes i menús especials en locals." },
+    v3Title:  { ES: "Deportes",    EN: "Sports",     VAL: "Esports" },
+    v3Desc:   { ES: "Cuotas reducidas en gimnasios y pistas.", EN: "Reduced fees at gyms and courts.", VAL: "Quotes reduïdes en gimnasos i pistes." },
+    v4Title:  { ES: "Transporte Mobilis 30", EN: "Mobilis 30 Transport", VAL: "Transport Mobilis 30" },
+    v4Desc:   { ES: "Bono mensual a 14,90 € en la mobilis30.", EN: "Monthly pass at €14.90 on mobilis30.", VAL: "Bo mensual a 14,90 € en la mobilis30." },
+    v5Title:  { ES: "Tecnología",  EN: "Technology", VAL: "Tecnologia" },
+    v5Desc:   { ES: "Ofertas en reparaciones y tiendas locales.", EN: "Deals on repairs and local shops.", VAL: "Ofertes en reparacions i botigues locals." },
+    v6Title:  { ES: "Museos",      EN: "Museums",    VAL: "Museus" },
+    v6Desc:   { ES: "Hasta un 50% de descuento en la entrada.", EN: "Up to 50% off admission.", VAL: "Fins a un 50% de descompte en l'entrada." },
   },
 
   // ─── EMPLEO Y FORMACIÓN ─────────────────────────────────────────────────────
@@ -252,19 +267,64 @@ const translations = {
     intro1:    { ES: "Creemos en tu talento y queremos impulsarte hacia el futuro que mereces.", EN: "We believe in your talent and want to drive you towards the future you deserve.", VAL: "Creiem en el teu talent i volem impulsar-te cap al futur que mereixes." },
     intro2:    { ES: "¿Qué lo económico no te frene? La Beca MEC es el impulso clave que necesitas para tu crecimiento profesional.", EN: "Don't let finances hold you back. The MEC Grant is the key boost you need for your professional growth.", VAL: "Que l'econòmic no et frene? La Beca MEC és l'impuls clau que necessites per al teu creixement professional." },
     footer:    { ES: "¿Te cuesta encontrar empleo? No estás solo en la búsqueda. Gracias a LABORA, multiplica tus probabilidades de acceder al mercado laboral.", EN: "Struggling to find work? You are not alone. Thanks to LABORA, multiply your chances of accessing the labour market.", VAL: "Et costa trobar ocupació? No estàs sol en la cerca. Gràcies a LABORA, multiplica les teues probabilitats d'accedir al mercat laboral." },
-    btn1:      { ES: "Accede a Labora",       EN: "Access Labora",        VAL: "Accedeix a Labora" },
-    btn2:      { ES: "Más Información",       EN: "More Information",     VAL: "Més Informació" },
-    btn3:      { ES: "Ver Recursos Locales",  EN: "View Local Resources", VAL: "Veure Recursos Locals" },
+    btn1:      { ES: "Accede a Labora",   EN: "Access Labora",    VAL: "Accedeix a Labora" },
+    btn2:      { ES: "Más Información",   EN: "More Information", VAL: "Més Informació" },
+    btn3:      { ES: "Visitar sitio Web", EN: "Visit website",    VAL: "Visitar lloc Web" },
+    masInfo:   { ES: "Más información ↓", EN: "More info ↓",      VAL: "Més informació ↓" },
+    s1Title:   { ES: "Labora",                   EN: "Labora",                    VAL: "Labora" },
+    s1Sub:     { ES: "(Servicio público)",        EN: "(Public service)",          VAL: "(Servei públic)" },
+    s1Desc:    { ES: "Ofertas de empleo, formación y orientación laboral", EN: "Job offers, training and career guidance", VAL: "Ofertes d'ocupació, formació i orientació laboral" },
+    s2Title:   { ES: "BECA MEC",                 EN: "MEC GRANT",                 VAL: "BECA MEC" },
+    s2Sub:     { ES: "(Ministerio de Educación)", EN: "(Ministry of Education)",   VAL: "(Ministeri d'Educació)" },
+    s2Desc:    { ES: "Ayudas para estudios Bachiller, Formación Profesional y Universitarios", EN: "Grants for Baccalaureate, Vocational Training and University studies", VAL: "Ajudes per a estudis Batxillerat, Formació Professional i Universitaris" },
+    s3Title:   { ES: "TODO FP",                  EN: "TODO FP",                   VAL: "TODO FP" },
+    s3Desc:    { ES: "Buscador oficial para encontrar tu ciclo de FP (Básico, Medio y Superior). Descubre todos los centros educativos públicos y privados homologados de forma segura.", EN: "Official search engine to find your vocational training cycle (Basic, Intermediate and Advanced). Discover all accredited public and private educational centres safely.", VAL: "Cercador oficial per a trobar el teu cicle de FP (Bàsic, Mitjà i Superior). Descobreix tots els centres educatius públics i privats homologats de forma segura." },
+
+    // ── NUEVA sección Más Información ──
+    infoTitle: {
+      ES: "Más información sobre los recursos",
+      EN: "More information about the resources",
+      VAL: "Més informació sobre els recursos",
+    },
+    infoSubtitle: {
+      ES: "Conoce en detalle adónde te dirigimos y por qué estos recursos son clave para tu futuro.",
+      EN: "Find out in detail where we are directing you and why these resources are key to your future.",
+      VAL: "Coneix en detall on t'adrecem i per què estos recursos són clau per al teu futur.",
+    },
+
+    info1Title: { ES: "LABORA: Empleo y Formación en la palma de tu mano", EN: "LABORA: Employment and Training at your fingertips", VAL: "LABORA: Ocupació i Formació al teu abast" },
+    info1Sub:   { ES: "Servicio Valenciano de Empleo y Formación", EN: "Valencian Employment and Training Service", VAL: "Servei Valencià d'Ocupació i Formació" },
+    info1Body: {
+      ES: "LABORA es el pilar fundamental para cualquier joven de Burjassot que quiera iniciar su trayectoria laboral. Su función principal es conectar a las personas con las empresas a través de su Portal de Empleo (Punt LABORA). Al inscribirte como demandante, accedes a una bolsa de trabajo exclusiva donde puedes filtrar ofertas específicas en Valencia y alrededores. Pero no solo es una lista de ofertas; LABORA gestiona programas de Emprendimiento para quienes quieren montar su propio negocio y planes de Empleo Público para jóvenes. Además, es obligatorio estar inscrito para acceder a la Garantía Juvenil, un programa europeo que incentiva a las empresas para que te contraten de forma estable. Si buscas tu primer empleo, recuerda que puedes solicitar un orientador laboral que te ayudará a definir tu perfil y a buscar las empresas que más encajan contigo.",
+      EN: "LABORA is the fundamental pillar for any young person from Burjassot who wants to start their working career. Its main function is to connect people with companies through its Employment Portal (Punt LABORA). By registering as a job seeker, you access an exclusive job pool where you can filter specific offers in Valencia and surroundings. But it is not just a list of offers; LABORA manages Entrepreneurship programmes for those who want to set up their own business and Public Employment plans for young people. Additionally, registration is mandatory to access the Youth Guarantee, a European programme that incentivises companies to hire you on a stable basis. If you are looking for your first job, remember that you can request a career advisor who will help you define your profile and find the companies that best suit you.",
+      VAL: "LABORA és el pilar fonamental per a qualsevol jove de Burjassot que vulga iniciar la seua trajectòria laboral. La seua funció principal és connectar les persones amb les empreses a través del seu Portal d'Ocupació (Punt LABORA). En inscriure't com a demandant, accedixes a una borsa de treball exclusiva on pots filtrar ofertes específiques a València i voltants. Però no sols és una llista d'ofertes; LABORA gestiona programes d'Emprenedoria per a qui vol muntar el seu propi negoci i plans d'Ocupació Pública per a joves. A més, és obligatori estar inscrit per a accedir a la Garantia Juvenil, un programa europeu que incentiva les empreses perquè et contracten de forma estable. Si busques el teu primer treball, recorda que pots sol·licitar un orientador laboral que t'ajudarà a definir el teu perfil i a buscar les empreses que més encaixen amb tu.",
+    },
+
+    info2Title: { ES: "Becas MEC: Apoyo económico para tu carrera profesional", EN: "MEC Grants: Financial support for your professional career", VAL: "Beques MEC: Suport econòmic per a la teua carrera professional" },
+    info2Sub:   { ES: "Ayudas del Ministerio de Educación y Formación Profesional", EN: "Grants from the Ministry of Education and Vocational Training", VAL: "Ajudes del Ministeri d'Educació i Formació Professional" },
+    info2Body: {
+      ES: "Las becas MEC son la inversión del Estado en tu talento. Su objetivo es que tu situación económica no dicte hasta dónde puedes llegar en tu formación. Estas ayudas no solo cubren el coste de la matrícula en universidades o centros de FP, sino que incluyen cuantías fijas y variables que pueden sumar varios miles de euros según tu renta, tu rendimiento académico y si necesitas desplazarte de Burjassot para estudiar. Punto clave: Solicitar la beca es el primer paso para profesionalizarte. No solo es para grados universitarios; también cubre los ciclos de Grado Medio y Superior. El proceso es totalmente telemático y es crucial revisar el estado de tu solicitud periódicamente en la sede electrónica del Ministerio para no perder los plazos de alegaciones si te falta algún documento.",
+      EN: "MEC grants are the State's investment in your talent. Their aim is to ensure your economic situation does not dictate how far you can go in your training. These grants not only cover the cost of enrolment at universities or VET centres, but also include fixed and variable amounts that can add up to several thousand euros depending on your income, your academic performance and whether you need to travel from Burjassot to study. Key point: Applying for the grant is the first step to becoming professional. It is not just for university degrees; it also covers Intermediate and Higher Vocational Training cycles. The process is entirely online and it is crucial to periodically check the status of your application on the Ministry's electronic office so as not to miss the appeal deadlines if any document is missing.",
+      VAL: "Les beques MEC són la inversió de l'Estat en el teu talent. El seu objectiu és que la teua situació econòmica no dicte fins on pots arribar en la teua formació. Estes ajudes no sols cobrixen el cost de la matrícula en universitats o centres de FP, sinó que inclouen quanties fixes i variables que poden sumar diversos milers d'euros segons la teua renda, el teu rendiment acadèmic i si necessites desplaçar-te de Burjassot per a estudiar. Punt clau: Sol·licitar la beca és el primer pas per a professionalitzar-te. No és sols per a graus universitaris; també cobreix els cicles de Grau Mitjà i Superior. El procés és totalment telemàtic i és crucial revisar l'estat de la teua sol·licitud periòdicament en la seu electrònica del Ministeri per a no perdre els terminis d'al·legacions si et falta algun document.",
+    },
+
+    info3Title: { ES: "Todo FP: Especialización con alta empleabilidad", EN: "Todo FP: Specialisation with high employability", VAL: "Todo FP: Especialització amb alta ocupabilitat" },
+    info3Sub:   { ES: "El portal de referencia de la Formación Profesional", EN: "The reference portal for Vocational Training", VAL: "El portal de referència de la Formació Professional" },
+    info3Body: {
+      ES: "En el mercado actual, las empresas buscan perfiles especializados, y ahí es donde la FP brilla. A través de Todo FP, puedes descubrir ciclos formativos con tasas de inserción laboral cercanas al 100%. Lo más interesante para quienes buscan empleo rápido es la FP Dual: un modelo donde aprendes trabajando en empresas reales desde el primer curso, cotizando a la Seguridad Social y ganando experiencia directa. El portal te permite comparar todas las familias profesionales, desde la rama sanitaria hasta la informática o las energías renovables. Podrás ver qué salidas profesionales tiene cada título, cuánto dura la formación y dónde están los centros más cercanos a Burjassot para cursarlos. Es la herramienta ideal para diseñar un camino formativo que te garantice un puesto de trabajo cualificado en el futuro.",
+      EN: "In today's market, companies look for specialised profiles, and that is where VET shines. Through Todo FP, you can discover training cycles with job placement rates close to 100%. The most interesting option for those seeking quick employment is Dual VET: a model where you learn by working in real companies from the first year, paying into Social Security and gaining direct experience. The portal allows you to compare all professional families, from healthcare to computing or renewable energies. You can see what professional opportunities each qualification offers, how long the training lasts and where the nearest centres to Burjassot are. It is the ideal tool to design a training path that guarantees you a qualified job in the future.",
+      VAL: "En el mercat actual, les empreses busquen perfils especialitzats, i és ahí on la FP brilla. A través de Todo FP, pots descobrir cicles formatius amb taxes d'inserció laboral properes al 100%. El més interessant per a qui busca treball ràpid és la FP Dual: un model on aprens treballant en empreses reals des del primer curs, cotitzant a la Seguretat Social i guanyant experiència directa. El portal et permet comparar totes les famílies professionals, des de la branca sanitària fins a la informàtica o les energies renovables. Podràs veure quixes eixides professionals té cada títol, quant dura la formació i on estan els centres més pròxims a Burjassot per a cursar-los. És l'eina ideal per a dissenyar un camí formatiu que et garantisca un lloc de treball qualificat en el futur.",
+    },
   },
 
   // ─── CULTURA ────────────────────────────────────────────────────────────────
   cultura: {
-    titulo:    { ES: "Cultura y Ocio",                          EN: "Culture and Leisure",                      VAL: "Cultura i Oci" },
-    subtitulo: { ES: "El ocio y la cultura joven en Burjassot", EN: "Youth leisure and culture in Burjassot",   VAL: "L'oci i la cultura jove a Burjassot" },
-    col1:      { ES: "Música y conciertos",   EN: "Music and concerts",   VAL: "Música i concerts" },
-    col2:      { ES: "Teatro y cine",          EN: "Theatre and cinema",   VAL: "Teatre i cinema" },
-    col3:      { ES: "Talleres creativos",     EN: "Creative workshops",   VAL: "Tallers creatius" },
-    col4:      { ES: "Fiestas locales",        EN: "Local festivals",      VAL: "Festes locals" },
+    titulo:    { ES: "Cultura y Ocio",                          EN: "Culture and Leisure",                     VAL: "Cultura i Oci" },
+    subtitulo: { ES: "El ocio y la cultura joven en Burjassot", EN: "Youth leisure and culture in Burjassot",  VAL: "L'oci i la cultura jove a Burjassot" },
+    col1:      { ES: "Música y conciertos",  EN: "Music and concerts",  VAL: "Música i concerts" },
+    col2:      { ES: "Teatro y cine",         EN: "Theatre and cinema",  VAL: "Teatre i cinema" },
+    col3:      { ES: "Talleres creativos",    EN: "Creative workshops",  VAL: "Tallers creatius" },
+    col4:      { ES: "Fiestas locales",       EN: "Local festivals",     VAL: "Festes locals" },
   },
 };
 

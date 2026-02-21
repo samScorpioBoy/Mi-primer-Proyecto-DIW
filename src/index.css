@@ -1,4 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lato:wght@400;600;700&family=Merriweather:wght@400;700;900&display=swap');
+
+:root {
+  /* Colores principales */
+  --color-primary:      #1a4b8c;
+  --color-primary-dark: #1a3a6e;
+  --color-success:      #2aa952;
+  --color-success-dark: #148429;
+  --color-success-bg:   #f0f9f4;
+  --color-accent:       #f5a623;
+  --color-accent-bg:    #fff8ed;
+  --color-danger:       #e53935;
+  --color-danger-bg:    #fde8e8;
+  --color-whatsapp:     #25d366;
+
+  /* Fondos */
+  --bg-page:   #f8f8f8;
+  --bg-white:  #ffffff;
+  --bg-soft:   #f5f5f0;
+  --bg-blue:   #eef3fb;
+
+  /* Neutros */
+  --color-text:       #1a1a1a;
+  --color-text-soft:  #555;
+  --color-text-muted: #888;
+  --color-border:     #e0e0e0;
+
+  /* Tipografías */
+  --font-main:  'Montserrat', sans-serif;
+  --font-ui:    'Lato', sans-serif;
+  --font-serif: 'Merriweather', serif;
+
+  /* Radios */
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-pill: 30px;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
+  /* Transiciones */
+  --transition: 0.2s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background-color: #f8f8f8;
+  background-color: var(--bg-page);
+  font-family: var(--font-ui);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-ui);
+  cursor: pointer;
 }

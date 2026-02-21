@@ -6,7 +6,6 @@ import { LangProvider, useLang } from "./context/LangContext";
 
 // Páginas
 import Home from "./pages/Home";
-import Cultura from "./pages/Cultura";
 import Carne from "./pages/Carne";
 import Cursos from "./pages/Cursos";
 import Vivienda from "./pages/Vivienda";
@@ -31,10 +30,9 @@ function Header() {
 
         <nav className="menu">
           <NavLink to="/"         className={({ isActive }) => isActive ? "active" : ""}>{t("nav.inicio")}</NavLink>
-          <NavLink to="/cultura"  className={({ isActive }) => isActive ? "active" : ""}>{t("nav.cultura")}</NavLink>
           <NavLink to="/carne"    className={({ isActive }) => isActive ? "active" : ""}>{t("nav.carne")}</NavLink>
           <NavLink to="/empleo"   className={({ isActive }) => isActive ? "active" : ""}>{t("nav.empleo")}</NavLink>
-          <NavLink to="/descubre" className={({ isActive }) => isActive ? "active" : ""}>{t("nav.cursos")}</NavLink>
+          <NavLink to="/cursos"   className={({ isActive }) => isActive ? "active" : ""}>{t("nav.cursos")}</NavLink>
           <NavLink to="/vivienda" className={({ isActive }) => isActive ? "active" : ""}>{t("nav.vivienda")}</NavLink>
           <NavLink to="/salud"    className={({ isActive }) => isActive ? "active" : ""}>{t("nav.salud")}</NavLink>
         </nav>
@@ -62,11 +60,10 @@ function AppContent() {
       <AdminBadge />
       <Routes>
         <Route path="/"         element={<Home />} />
-        <Route path="/cultura"  element={<Cultura />} />
         <Route path="/carne"    element={<Carne />} />
         <Route path="/salud"    element={<Salud />} />
         <Route path="/empleo"   element={<EmpleoFormacion />} />
-        <Route path="/descubre" element={<Cursos />} />
+        <Route path="/cursos"   element={<Cursos />} />
         <Route path="/vivienda" element={<Vivienda />} />
         <Route path="/admin"    element={<Admin />} />
       </Routes>

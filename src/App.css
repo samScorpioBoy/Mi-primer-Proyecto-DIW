@@ -1,93 +1,96 @@
-/* RESET */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f8f8f8;
-}
+/* 
+   Layout global, Header, Nav, Footer badge
+  */
 
 /* HEADER */
 .header {
   width: 100%;
-  border-bottom: 1px solid #e0e0e0;
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-content {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 5px 30px;
+  padding: 8px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .logo {
-  height: 40px;
-  border-radius: 25px;
+  height: 50px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
-/* MENU */
+/* MENÚ */
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
 .menu a {
-  margin: 14px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-main);
+  color: var(--color-text);
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: color 0.2s ease;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+  white-space: nowrap;
 }
 
 .menu a:hover {
-  color: #2aa952;
+  color: var(--color-success);
 }
 
 .menu .active {
-  color: #148429;
-  text-decoration-color: #148429;
-  text-underline-offset: 4px;
-  background-color: #93dfba;
-  border-radius: 4px;
-  font-weight: bold;
+  color: var(--color-success-dark);
+  background-color: #c6f0d8;
+  border-radius: var(--radius-sm);
 }
 
-/* BANDERAS */
+/* SELECTOR DE IDIOMA */
 .banderas {
   display: flex;
-  gap: 25px;
+  gap: 8px;
   align-items: center;
-}
-
-.bandera {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .lang-text {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
+  font-family: var(--font-ui);
   cursor: pointer;
-  color: #555;
-  transition: color 0.2s;
+  color: var(--color-text-soft);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition);
+  user-select: none;
 }
 
 .lang-text:hover {
-  color: #148429;
+  color: var(--color-primary);
 }
 
 .active-lang {
-  color: #148429;
-  text-decoration: underline;
+  color: var(--color-primary);
+  background: var(--bg-blue);
 }
 
-/* BADGE ADMIN — flotante fixed abajo a la derecha */
+/* BADGE ADMIN */
 .admin-badge {
   position: fixed;
   bottom: 28px;
@@ -97,145 +100,97 @@ body {
   color: #3a2a00;
   font-size: 12px;
   font-weight: 800;
+  font-family: var(--font-ui);
   letter-spacing: 1px;
   padding: 10px 20px;
-  border-radius: 30px;
-  box-shadow: 0 4px 16px rgba(201, 162, 39, 0.5);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 16px rgba(201,162,39,0.5);
   animation: pulse-gold 2.5s ease-in-out infinite;
   user-select: none;
   pointer-events: none;
 }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 4px 16px rgba(201, 162, 39, 0.5); }
-  50%       { box-shadow: 0 4px 28px rgba(201, 162, 39, 0.9); }
+  0%, 100% { box-shadow: 0 4px 16px rgba(201,162,39,0.5); }
+  50%       { box-shadow: 0 4px 28px rgba(201,162,39,0.9); }
 }
 
-/* MAIN */
-.main {
-  width: 100%;
-}
-
-.main-content {
-  max-width: 1300px;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 30px;
-}
-
-/* HERO */
-.hero {
-  margin: 20px 0;
-}
-
-.hero-icon {
-  height: 100px;
-  margin-bottom: 5px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-top: 10px;
-}
-
-/* CATEGORÍAS */
-.categorias {
-  display: flex;
-  justify-content: center;
-  gap: 34px;
-  margin-bottom: 30px;
-}
-
-.card {
-  width: 220px;
-  height: 200px;
-  border-radius: 26px;
-  padding: 24px 20px;
-  border: 2px solid;
-  display: flex;
+/* MENÚ HAMBURGUESA (móvil) */
+.menu-toggle {
+  display: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card img {
-  height: 64px;
-  margin-bottom: 14px;
-}
-
-.card p {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* COLORES */
-.verde {
-  border-color: #6fcf97;
-  color: #6fcf97;
-}
-
-.amarillo {
-  border-color: #f5a623;
-  color: #f5a623;
-}
-
-/* EVENTOS */
-.eventos {
-  width: 100%;
-  padding: 20px 0 40px;
-}
-
-.eventos-content {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 3px;
-}
-
-.eventos-content h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.eventos-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.eventos-grid img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* HOME DIVIDER */
-.home-divider {
+  gap: 5px;
+  background: none;
   border: none;
-  border-top: 2px solid #f5a623;
-  max-width: 800px;
-  margin: 30px auto;
+  padding: 6px;
+  cursor: pointer;
 }
 
-/* HOME TEXTO */
-.home-texto {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: justify;
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition);
 }
 
-.home-texto p {
-  font-size: 15px;
-  color: #333;
-  line-height: 1.8;
-  margin-bottom: 20px;
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE HEADER
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-white);
+    border-top: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: 12px 20px;
+    gap: 4px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .header-content {
+    flex-wrap: wrap;
+    padding: 10px 16px;
+    position: relative;
+  }
+
+  .banderas {
+    margin-left: auto;
+  }
+
+  .admin-badge {
+    bottom: 16px;
+    right: 16px;
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 40px;
+  }
+
+  .lang-text {
+    font-size: 12px;
+  }
 }

@@ -1,50 +1,82 @@
 .cultura-page {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px 24px;
   text-align: center;
 }
 
-/* Header */
+/* HEADER */
+.cultura-header {
+  margin-bottom: 28px;
+}
+
 .cultura-header h1 {
-  font-size: 36px;
-  margin-bottom: 5px;
+  font-family: var(--font-main);
+  font-size: 34px;
+  font-weight: 900;
+  color: var(--color-primary);
+  margin: 0 0 8px;
 }
 
 .cultura-header p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--color-text-soft);
+  margin: 0 0 20px;
 }
 
-/* Grid de posts: 4 columnas x 2 filas */
+/* GRID */
 .cultura-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .columna {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 250px; /* todos los posts mismo ancho */
+  gap: 16px;
 }
 
-/* Botón encima de la primera imagen */
+/* BOTÓN CATEGORÍA */
 .btn-columna {
-  padding: 10px 20px;
+  padding: 10px 16px;
   border: none;
-  background-color: #6fcf97;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
+  background: var(--color-success);
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.2s ease;
+  transition: background var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn-columna:hover {
-  background-color: #52b16a;
+  background: var(--color-success-dark);
+}
+
+/* RESPONSIVE*/
+@media (max-width: 1024px) {
+  .cultura-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cultura-page {
+    padding: 20px 16px;
+  }
+
+  .cultura-header h1 {
+    font-size: 26px;
+  }
+
+  .cultura-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }

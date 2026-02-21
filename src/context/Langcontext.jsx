@@ -4,9 +4,15 @@ import translations from "../i18n/translations";
 const LangContext = createContext();
 
 export function LangProvider({ children }) {
-  const [lang, setLang] = useState("ES");
+  const [lang, setLangState] = useState(() => {
+    return localStorage.getItem("lang") || "ES";
+  });
 
-  // Función helper: t("home.hero") devuelve el texto en el idioma actual
+  function setLang(newLang) {
+    localStorage.setItem("lang", newLang);
+    setLangState(newLang);
+  }
+
   function t(path) {
     const keys = path.split(".");
     let value = translations;

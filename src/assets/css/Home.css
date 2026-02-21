@@ -3,13 +3,12 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  position: relative;
 }
 
 .home-overlay {
-  background: rgba(46, 42, 42, 0.55);
+  background: rgba(30, 27, 27, 0.58);
   min-height: 100vh;
-  padding: 40px 60px;
+  padding: 50px 60px;
 }
 
 /* HERO */
@@ -17,41 +16,44 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
   justify-content: center;
+  margin-bottom: 32px;
 }
 
 .home-hero-icon {
   height: 80px;
+  flex-shrink: 0;
 }
 
 .home-hero h1 {
+  font-family: var(--font-main);
   font-size: 48px;
   font-weight: 900;
-  color: #ffffff;
+  color: #fff;
   margin: 0;
+  line-height: 1.2;
 }
 
 /* TEXTO */
 .home-texto {
-  max-width: 1500px;
+  max-width: 900px;
   margin: 0 auto 30px;
 }
 
 .home-texto p {
-  font-size: 20px;
+  font-size: 17px;
   color: #e9e9e9;
   line-height: 1.8;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   text-align: justify;
 }
 
 /* DIVIDER */
 .home-divider {
   border: none;
-  border-top: 2px solid #f5a623;
-  max-width: 800px;
-  margin: 20px auto 30px;
+  border-top: 2px solid var(--color-accent);
+  max-width: 700px;
+  margin: 24px auto 32px;
 }
 
 /* CATEGORÍAS */
@@ -59,7 +61,8 @@
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding: 20px 0 40px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 .home-card {
@@ -71,29 +74,30 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform var(--transition), box-shadow var(--transition);
   padding: 20px;
+  background: rgba(30, 100, 70, 0.75);
+  color: #fff;
 }
 
 .home-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
 }
 
 .home-card-icon {
-  height: 60px;
+  height: 80px;
   margin-bottom: 12px;
   object-fit: contain;
-  mix-blend-mode: multiply;
-  transition: filter 0.3s ease;
+  transition: filter var(--transition);
 }
 
 .home-card:hover .home-card-icon {
-  mix-blend-mode: normal;
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) brightness(1.3);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.9)) brightness(1.3);
 }
 
 .home-card p {
+  font-family: var(--font-main);
   font-size: 15px;
   font-weight: 700;
   text-align: center;
@@ -101,13 +105,56 @@
   line-height: 1.3;
 }
 
-/* Colores de las cards */
-.cat-verde {
-  background: rgba(30, 100, 70, 0.75);
-  color: #fff;
+/*  RESPONSIVE */
+@media (max-width: 768px) {
+  .home-overlay {
+    padding: 32px 24px;
+    background-attachment: unset;
+  }
+
+  .home-hero h1 {
+    font-size: 32px;
+  }
+
+  .home-hero-icon {
+    height: 56px;
+  }
+
+  .home-texto p {
+    font-size: 15px;
+  }
+
+  .home-categorias {
+    gap: 16px;
+  }
+
+  .home-card {
+    width: 160px;
+    height: 160px;
+  }
 }
 
-.cat-amarillo {
-  background: rgba(30, 100, 70, 0.75);
-  color: #fff;
+@media (max-width: 480px) {
+  .home-overlay {
+    padding: 24px 16px;
+  }
+
+  .home-hero {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .home-hero h1 {
+    font-size: 26px;
+  }
+
+  .home-card {
+    width: 140px;
+    height: 140px;
+  }
+
+  .home-card p {
+    font-size: 13px;
+  }
 }

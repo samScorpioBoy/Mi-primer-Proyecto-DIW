@@ -10,7 +10,7 @@ export default function Salud() {
   const servicios = [
     { icon: "🧠", iconBg: "#6fcf97", title: t("salud.card1Title"), desc: t("salud.card1Desc"), btnText: t("salud.card1Btn"), btnClass: "btn-salud-yellow", scrollTo: "salud-mental" },
     { icon: "🏃", iconBg: "#f5a623", title: t("salud.card2Title"), desc: t("salud.card2Desc"), btnText: t("salud.card2Btn"), btnClass: "btn-salud-green", scrollTo: "actividades-saludables" },
-    { icon: "👨‍👩‍👧", iconBg: "#1a4b8c", title: t("salud.card3Title"), desc: t("salud.card3Desc"), btnText: t("salud.card3Btn"), btnClass: "btn-salud-dark",  scrollTo: "salud-sexual" },
+    { icon: "👨‍👩‍👧", iconBg: "#1a4b8c", title: t("salud.card3Title"), desc: t("salud.card3Desc"), btnText: t("salud.card3Btn"), btnClass: "btn-salud-dark", scrollTo: "salud-sexual" },
   ];
 
   const articulos = [
@@ -20,11 +20,18 @@ export default function Salud() {
     { title: t("salud.art4Title"), desc: t("salud.art4Desc") },
   ];
 
+  // 3 tarjetas principales 
   const saludSexualCards = [
     { icon: "🩺", titulo: t("salud.sex1Title"), contenido: [t("salud.sex1i1"), t("salud.sex1i2"), t("salud.sex1i3")] },
     { icon: "🎗️", titulo: t("salud.sex2Title"), contenido: [t("salud.sex2i1"), t("salud.sex2i2"), t("salud.sex2i3")] },
-    { icon: "❤️", titulo: t("salud.sex3Title"), contenido: [t("salud.sex3i1"), t("salud.sex3i2"), t("salud.sex3i3")] },
-    { icon: "💬", titulo: t("salud.sex4Title"), contenido: [t("salud.sex4i1"), t("salud.sex4i2"), t("salud.sex4i3")] },
+    { icon: "❤️",  titulo: t("salud.sex3Title"), contenido: [t("salud.sex3i1"), t("salud.sex3i2"), t("salud.sex3i3")] },
+  ];
+
+  // Nueva tarjeta Derechos
+  const derechos = [
+    { emoji: "🔒", titulo: t("salud.der1Title"), desc: t("salud.der1Desc") },
+    { emoji: "✊", titulo: t("salud.der2Title"), desc: t("salud.der2Desc") },
+    { emoji: "🏥", titulo: t("salud.der3Title"), desc: t("salud.der3Desc") },
   ];
 
   const saludMentalCards = [
@@ -89,7 +96,9 @@ export default function Salud() {
       <div id="salud-sexual" className="salud-sexual-section">
         <h2>{t("salud.sexualTitle")}</h2>
         <p className="salud-sexual-intro">{t("salud.sexualIntro")}</p>
+
         <div className="salud-sexual-grid">
+          {/* 3 tarjetas informativas */}
           {saludSexualCards.map((c, i) => (
             <div className="salud-sexual-card" key={i}>
               <div className="salud-sexual-icon">{c.icon}</div>
@@ -97,6 +106,45 @@ export default function Salud() {
               <ul>{c.contenido.map((item, j) => <li key={j}>{item}</li>)}</ul>
             </div>
           ))}
+
+          {/* Tarjeta Derechos */}
+          <div className="salud-sexual-card salud-derechos-card">
+            <div className="salud-sexual-icon">⚖️</div>
+            <h3>{t("salud.derechosTitle")}</h3>
+            <ul>
+              {derechos.map((d, i) => (
+                <li key={i} className="derecho-item">
+                  <span className="derecho-emoji">{d.emoji}</span>
+                  <span><strong>{d.titulo}:</strong> {d.desc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* AVACOS */}
+        <div className="salud-avacos">
+          <div className="salud-avacos-content">
+            <h3>{t("salud.avacosTitle")}</h3>
+            <div className="salud-avacos-cards">
+              <div className="salud-avacos-card">
+                <span className="salud-avacos-icon">🔬</span>
+                <p>{t("salud.avacosDesc")}</p>
+              </div>
+              <div className="salud-avacos-card">
+                <span className="salud-avacos-icon">🗺️</span>
+                <p>{t("salud.avacosMapaDesc")}</p>
+              </div>
+            </div>
+            <div className="salud-avacos-btns">
+              <button className="btn-avacos btn-avacos-primary" onClick={() => window.open("https://avacos-h.org/", "_blank")}>
+                {t("salud.avacosBtnAvacos")}
+              </button>
+              <button className="btn-avacos btn-avacos-secondary" onClick={() => window.open("https://www.sanidad.gob.es/ciudadanos/enfLesiones/enfTransmisibles/sida/docs/mapaCentrosComunitarios.htm", "_blank")}>
+                {t("salud.avacosBtnMapa")}
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -134,21 +182,6 @@ export default function Salud() {
               <span>{t("salud.emergencia3")}</span>
             </div>
           </div>
-        </div>
-
-        {/* CITA */}
-        <div className="salud-cita">
-          <h3>{t("salud.citaTitle")}</h3>
-          <p>{t("salud.citaDesc")}</p>
-          <ul>
-            <li>📍 <strong>{t("salud.citaPresencial")}</strong> {t("salud.citaPresencialDesc")}</li>
-            <li>📱 <strong>{t("salud.citaWA")}</strong> {t("salud.citaWADesc")}</li>
-            <li>✉️ <strong>{t("salud.citaEmail")}</strong> {t("salud.citaEmailDesc")}</li>
-          </ul>
-          <p className="cita-nota">{t("salud.citaNota")}</p>
-          <button className="btn-cita" onClick={() => window.open("https://wa.me/34000000000", "_blank")}>
-            {t("salud.contactoWA")}
-          </button>
         </div>
       </div>
 

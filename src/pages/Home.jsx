@@ -6,6 +6,7 @@ import formacionImg from "../assets/iconformacion-home.png";
 import AyudasImg from "../assets/casita-vivienda.png";
 import saludImg from "../assets/salud-icon.png";
 import tallerImg from "../assets/taller-icon-home.png";
+import carneImg from "../assets/carnet-icon-home.png";
 import "../assets/css/Home.css";
 
 export default function Home() {
@@ -13,10 +14,11 @@ export default function Home() {
   const { t } = useLang();
 
   const categorias = [
-    { icon: formacionImg, labelKey: "home.cats.formacion", path: "/cultura",  clase: "cat-verde" },
-    { icon: AyudasImg,   labelKey: "home.cats.vivienda",  path: "/vivienda", clase: "cat-amarillo" },
-    { icon: saludImg,    labelKey: "home.cats.salud",     path: "/salud",    clase: "cat-verde" },
-    { icon: tallerImg,   labelKey: "home.cats.cursos",    path: "/descubre", clase: "cat-verde" },
+    { icon: carneImg,     labelKey: "home.cats.carne",     path: "/carne",    clase: "cat-amarillo" },
+    { icon: formacionImg, labelKey: "home.cats.formacion", path: "/empleo",   clase: "cat-verde" },
+    { icon: AyudasImg,    labelKey: "home.cats.vivienda",  path: "/vivienda", clase: "cat-amarillo" },
+    { icon: saludImg,     labelKey: "home.cats.salud",     path: "/salud",    clase: "cat-verde" },
+    { icon: tallerImg,    labelKey: "home.cats.cursos",    path: "/cursos",   clase: "cat-verde" },
   ];
 
   return (

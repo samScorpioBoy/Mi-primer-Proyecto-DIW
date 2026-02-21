@@ -1,0 +1,8 @@
+export const CATEGORIAS = [
+  "CREATIVIDAD",
+  "AUDIOVISUAL",
+  "TECNOLOGÍA",
+  "GASTRONOMÍA",
+  "IDIOMAS",
+  "MÚSICA",
+];
