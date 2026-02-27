@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo.png";
+import { HashRouter } from 'react-router-dom'
 
 import { LangProvider, useLang } from "./context/LangContext";
 
@@ -81,3 +82,7 @@ export default function App() {
     </Router>
   );
 }
+
+<HashRouter>
+  <App />
+</HashRouter>
