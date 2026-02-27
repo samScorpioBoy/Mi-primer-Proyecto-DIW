@@ -41,34 +41,34 @@ export default function Vivienda() {
       numero: "01",
       color: "info-dark",
       emoji: "🏠",
-      titulo: "Bono Alquiler Joven: Impulsa tu independencia",
-      subtitulo: "Ayuda Directa al Alquiler (250€ mensuales)",
-      cuerpo: "El Bono Alquiler Joven es una ayuda estatal diseñada para facilitar que los jóvenes puedan emanciparse sin que el precio del alquiler consuma todos sus ingresos. Se trata de una cuantía fija de 250 euros al mes durante un periodo de dos años. Lo que debes saber: Esta ayuda es compatible con otros planes de vivienda de la Generalitat Valenciana, siempre que no se supere el límite de renta establecido. El objetivo es que el coste del alquiler no suponga más del 40% de tus ingresos. Es fundamental que el contrato de alquiler esté a tu nombre y que la vivienda sea tu residencia habitual y permanente.",
+      titulo:    t("vivienda.info1Titulo"),
+      subtitulo: t("vivienda.info1Sub"),
+      cuerpo:    t("vivienda.info1Body"),
       url: "https://www.mivau.gob.es/vivienda/bono-alquiler-joven",
       btnClass: "btn-dark",
-      btnText: "Solicitar Bono Alquiler Joven →",
+      btnText:   t("vivienda.info1Btn"),
     },
     {
       numero: "02",
       color: "info-yellow",
       emoji: "📍",
-      titulo: "Ingreso Mínimo Vital (IMV): Una red de seguridad",
-      subtitulo: "Garantía de Rentas de la Seguridad Social",
-      cuerpo: "El Ingreso Mínimo Vital no es solo una ayuda económica, es un derecho que asegura un nivel básico de vida. Para los jóvenes que viven solos o en unidades de convivencia con recursos limitados, el IMV actúa como un soporte mensual para cubrir necesidades básicas mientras buscas mejorar tu situación laboral. Punto clave para jóvenes: Si tienes entre 23 y 29 años, puedes solicitarlo si acreditas que has vivido de forma independiente durante los últimos tres años. La cuantía varía según tus ingresos y las personas que vivan contigo. Además, el IMV incluye el 'Complemento de Ayuda a la Infancia' si tienes hijos a tu cargo, aumentando la protección económica de tu hogar.",
+      titulo:    t("vivienda.info2Titulo"),
+      subtitulo: t("vivienda.info2Sub"),
+      cuerpo:    t("vivienda.info2Body"),
       url: "https://imv.seg-social.es/",
       btnClass: "btn-yellow",
-      btnText: "Solicitar IMV →",
+      btnText:   t("vivienda.info2Btn"),
     },
     {
       numero: "03",
       color: "info-green",
       emoji: "🔑",
-      titulo: "Avales ICO: Tu primera casa sin ahorros previos",
-      subtitulo: "Aval del 20% para la Compra de Vivienda",
-      cuerpo: "Uno de los mayores obstáculos para comprar una casa es el famoso '20% de entrada' que los bancos no suelen financiar. El Gobierno, a través del Instituto de Crédito Oficial (ICO), ha lanzado este programa de avales para que los jóvenes con empleo pero sin grandes ahorros puedan acceder a una hipoteca de hasta el 100% del valor del inmueble. Cómo funciona: El Estado no te regala el dinero, sino que se convierte en tu 'avalista' ante el banco por ese 20% inicial. Esto permite que el banco te preste la totalidad del precio de la vivienda. Es una oportunidad única para comprar en Burjassot o cualquier otra localidad si tienes estabilidad laboral pero te falta ese empujón inicial de capital.",
+      titulo:    t("vivienda.info3Titulo"),
+      subtitulo: t("vivienda.info3Sub"),
+      cuerpo:    t("vivienda.info3Body"),
       url: "https://www.ico.es/avales-ico-para-la-compra-de-mi-primera-vivienda",
       btnClass: "btn-green",
-      btnText: "Ver Avales ICO →",
+      btnText:   t("vivienda.info3Btn"),
     },
   ];
 
@@ -112,7 +112,7 @@ export default function Vivienda() {
                 className={`ayuda-btn ${a.btnClass}`}
                 onClick={() => scrollToInfo(a.infoId)}
               >
-                Más información
+                {t("vivienda.masInfo")}
               </button>
             </div>
           ))}
@@ -125,8 +125,8 @@ export default function Vivienda() {
       {/* GUÍA DETALLADA */}
       <div className="vivienda-info-section">
         <div className="vivienda-info-header">
-          <h2>🏠 Guía Detallada de Ayudas a la Vivienda</h2>
-          <p>Conoce en detalle cada ayuda y descubre cuál se adapta mejor a tu situación.</p>
+          <h2>{t("vivienda.infoTitle")}</h2>
+          <p>{t("vivienda.infoSubtitle")}</p>
         </div>
 
         <div className="vivienda-info-lista">

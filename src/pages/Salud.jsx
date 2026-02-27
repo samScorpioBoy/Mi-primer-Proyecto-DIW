@@ -27,7 +27,7 @@ export default function Salud() {
     { icon: "❤️",  titulo: t("salud.sex3Title"), contenido: [t("salud.sex3i1"), t("salud.sex3i2"), t("salud.sex3i3")] },
   ];
 
-  // Nueva tarjeta Derechos
+  //tarjeta Derechos
   const derechos = [
     { emoji: "🔒", titulo: t("salud.der1Title"), desc: t("salud.der1Desc") },
     { emoji: "✊", titulo: t("salud.der2Title"), desc: t("salud.der2Desc") },
