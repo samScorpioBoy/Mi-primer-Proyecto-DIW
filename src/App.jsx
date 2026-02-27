@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { HashRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
 import "./App.css";
 import logo from "./assets/logo.png";
@@ -22,19 +23,34 @@ function AdminBadge() {
 
 function Header() {
   const { lang, setLang, t } = useLang();
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
+  function handleNavClick() {
+    setMenuAbierto(false);
+  }
 
   return (
     <header className="header">
       <div className="header-content">
         <img src={logo} alt="Jove Burjassot" className="logo" />
 
-        <nav className="menu">
-          <NavLink to="/"         className={({ isActive }) => isActive ? "active" : ""}>{t("nav.inicio")}</NavLink>
-          <NavLink to="/carne"    className={({ isActive }) => isActive ? "active" : ""}>{t("nav.carne")}</NavLink>
-          <NavLink to="/empleo"   className={({ isActive }) => isActive ? "active" : ""}>{t("nav.empleo")}</NavLink>
-          <NavLink to="/cursos"   className={({ isActive }) => isActive ? "active" : ""}>{t("nav.cursos")}</NavLink>
-          <NavLink to="/vivienda" className={({ isActive }) => isActive ? "active" : ""}>{t("nav.vivienda")}</NavLink>
-          <NavLink to="/salud"    className={({ isActive }) => isActive ? "active" : ""}>{t("nav.salud")}</NavLink>
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuAbierto(!menuAbierto)}
+          aria-label="Abrir menú"
+        >
+          <span style={{ transform: menuAbierto ? "rotate(45deg) translate(5px, 5px)" : "none", transition: "0.2s" }} />
+          <span style={{ opacity: menuAbierto ? 0 : 1, transition: "0.2s" }} />
+          <span style={{ transform: menuAbierto ? "rotate(-45deg) translate(5px, -5px)" : "none", transition: "0.2s" }} />
+        </button>
+
+        <nav className={`menu ${menuAbierto ? "open" : ""}`}>
+          <NavLink to="/"         onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.inicio")}</NavLink>
+          <NavLink to="/carne"    onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.carne")}</NavLink>
+          <NavLink to="/empleo"   onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.empleo")}</NavLink>
+          <NavLink to="/cursos"   onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.cursos")}</NavLink>
+          <NavLink to="/vivienda" onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.vivienda")}</NavLink>
+          <NavLink to="/salud"    onClick={handleNavClick} className={({ isActive }) => isActive ? "active" : ""}>{t("nav.salud")}</NavLink>
         </nav>
 
         <div className="banderas">
